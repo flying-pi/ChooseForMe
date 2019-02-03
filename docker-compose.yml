@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  app:
+    tty: true
+    stdin_open: true
+    container_name: choose_for_me
+    image: choose_for_me:latest
+    volumes:
+      - ${WORKDIR}/src:/app
+      - ${WORKDIR}/data:/data
+    command: "python main.py"
