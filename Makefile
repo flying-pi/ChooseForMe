@@ -14,9 +14,5 @@ run_app: .build/app_image ## Run application
 	docker build -t choose_for_me:latest -f Dockerfile .
 	touch .build/app_image
 
-.build/open_cv_image: .build Dockerfile-opencv
-	docker build -t choose_for_me_open_cv:latest -f Dockerfile-opencv .
-	touch .build/open_cv_image
-
 .build:
 	mkdir .build
